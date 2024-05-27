@@ -1,0 +1,1553 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    background: aliceblue;
+    color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav a {
+    padding: 20px;
+}
+
+
+
+ul {
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right; 
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 5%;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    font-family: 'Jost';
+    font-weight: 300;
+    font-size: x-large;
+    text-decoration: none;
+    color: rgb(216, 31, 55);
+    position: relative; 
+}
+ nav ul a::before {
+    content: '';
+    position: absolute;
+    top: 15px; 
+    left: 50%;
+    width: 0;
+    height: 0.5px;
+    background-color: rgb(216, 31, 55);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul a:hover::before {
+    width: calc(100% - 40px);
+    left: 20px;
+}
+
+
+.checkboxtoggler {
+    width: 3em;
+    display: none;
+    flex-direction: column;
+    gap: 0.7em;
+    cursor: pointer;
+  }
+  
+  .line-1 {
+    background: rgb(216, 31, 55);
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    z-index: 999;
+  }
+  
+  .line-2 {
+    background: rgb(216, 31, 55);
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    z-index: 999;
+  }
+  
+  .line-3  {
+    background: rgb(216, 31, 55);
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    z-index: 999;
+}
+
+.sidenav .menu1 {
+    margin-top: 30%;
+}
+
+  
+#toggleChecker {
+    height: 3em;
+    width: 100%;
+    display: none;
+
+  }
+  
+.checkboxtoggler {
+    display: none;
+}
+
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+    -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  }
+  
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+    -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  }
+  
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .sidenav {
+   
+    display: none;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 240, 243);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a::before {
+    content: '';
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    width: 0;
+    height: 0.5px;
+    background-color: rgb(216, 31, 55);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::before {
+    width: calc(50% - 40px);
+    left: 80px;
+}
+
+
+.sidenav.open {
+    width: 250px;
+}
+
+.sidenav a {
+    color: rgb(216, 31, 55);
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+
+a img {
+    height: 100px; 
+    width: auto; 
+    margin-left: 2%;
+}
+
+.uvodni .jedna {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.uvodni .dva, .uvodni .tri {
+    display: none;
+}
+
+@font-face {
+    font-family: Raxtor;
+    src:url(Raxtor-Bold.ttf)
+}
+
+.section-container, .section-container2 {
+    padding-top: 8%;
+    padding-bottom: 10%;
+}
+
+.section-container2 {
+    padding-top: 5%;
+}
+
+.container, .container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+  
+}
+
+.image, .image2 {
+   
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.image {
+    max-width: 38%;
+}
+
+.image2 {
+    max-width: 45%;
+}
+
+.image img, .image2 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.text, .text2 {
+    font-family: 'Raxtor';
+    font-size: 20px;
+    flex: 1;
+}
+
+.text {
+    margin-left: 5%;
+}
+
+.text2 {
+    margin-top: 0%;
+}
+
+.text h1, .text2 h1 {
+    font-size: 50px;
+    font-family: 'Jost';
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-left: -0.5%;
+}
+
+.text h3, .text2 h3 {
+    margin-top: -5%;
+    color: rgb(216, 31, 55);
+}
+
+.text > hr{
+    border-color: rgb(216, 31, 55);
+    border: 1px solid rgb(216, 31, 55);
+    width: 65%;
+    margin-left: -0.1%;
+}
+
+.text2 > hr {
+    border-color: rgb(216, 31, 55);
+    border: 1px solid rgb(216, 31, 55);
+    width: 72%;
+    margin-left: -0.1%;
+}
+
+.text p::before, .text2 p::before {
+    content: "•"; 
+    color: rgb(216, 31, 55);
+    font-size: 25px;
+}
+
+.text p, .text2 p {
+    font-family: 'Arial';
+}
+
+
+#sluzby2 {
+    background-color: rgb(255, 240, 243);
+}
+
+
+.section-container3 {
+    padding-top: 2%;
+    background-color: black;
+    color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    
+}
+.text-onas h1 {
+    float: left;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-left: 5%;
+    font-family: 'Jost';
+}
+
+.text-onas .hlavni {
+    float: right;
+    margin-left: 20%;
+    width: 40%;
+    margin-right: 5%;
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.text-onas .podtim {
+    float: right;
+    margin-left: 20%;
+    width: 40%;
+    margin-right: 1%;
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.text-onas > hr{
+    border-color: rgb(216, 31, 55);
+    border: 1px solid rgb(216, 31, 55);
+    width: 23%;
+    float: left;
+    margin-top: 10%;
+    margin-left: 5%;
+    position: absolute;
+}
+
+.text-onas .reality  {
+    width: 10%;
+    margin-top: 14%;
+    float: left;
+    margin-left: -13%;
+}
+
+.text-onas .facility  {
+    width: 10%;
+    margin-top: 14%;
+    float: left;
+    margin-left: -1%;
+}
+
+.text-onas .ruce  {
+    float: right;
+    margin-top: 1.5%;
+    width: 3%;
+    margin-right: -19%;
+}
+
+
+
+
+.container4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.reference {
+    padding-top: 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+   padding-bottom: 5%;
+    background-color: rgb(255, 240, 243);
+}
+
+.reference h1 {
+    text-align: left;
+  
+    align-self: flex-start; 
+    float: left;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-left: 5%;
+    font-family: 'Jost';
+}
+
+.reference > hr{
+    border-color: rgb(216, 31, 55);
+    border: 1px solid rgb(216, 31, 55);
+    width: 30%;
+    float: left;
+    margin-top: -1.5%;
+    margin-left: 5.2%;
+}
+
+
+
+.radek1 {
+    margin-top: 0%;
+}
+
+.radek2, .radek3 {
+    margin-top: -5%;
+}
+
+.radek4 {
+    margin-top: -7%;
+}
+
+.radek1 img:nth-child(5),
+.radek2 img:nth-child(5),
+.radek3 img:nth-child(5),
+.radek4 img:nth-child(5) {
+    margin-right: 0;
+}
+
+
+.radek1, .radek2, .radek3, .radek4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.radek1 img, .radek2 img , .radek3 img, .radek4 img {
+    margin:  45px; 
+    margin-right: 2%;
+}
+
+
+
+
+.kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20%;
+}
+
+.image-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-text p {
+    font-size: 20px;
+}
+
+.columns-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -30%; 
+}
+
+
+.left-column, .right-column {
+    flex: 1;
+    text-align: center;
+}
+
+
+.left-column h2, .right-column h2 {
+    color:  rgb(216, 31, 55);
+    font-family: 'Raxtor';
+    margin-top: 20px; 
+    font-size: 40px;
+}
+.left-column h3, .right-column h3 {
+    margin-top: -4%;
+    font-size: 30px;
+    font-family: 'Jost';
+}
+
+.left-column p, .right-column p {
+    margin-top: 10px; 
+    font-size: 20px;
+    font-family: 'Jost';
+    font-weight: 300;
+}
+
+.left-column img {
+   width: 4%;
+    margin-right: -6.5%;
+    margin-bottom: -1%;
+}
+
+.right-column img {
+    width: 4%;
+    margin-right: -3.5%;
+    margin-bottom: -1%;
+}
+.left-column .telefon a, .right-column .telefon a {
+    font-family: 'Jost';
+    
+}
+
+.left-column  .email, .right-column  .email {
+    font-family: 'Jost';
+    
+}
+
+
+
+.left-column  a {
+    font-size: 20px;
+    color:  rgb(216, 31, 55);
+    font-weight: 500;
+    margin-left: 4%;
+    padding: 20px;
+}
+
+.right-column  a {
+    font-size: 20px;
+    color:  rgb(216, 31, 55);
+    font-weight: 500;
+    margin-left: 4%;
+}
+
+
+
+.left-column a:hover, .right-column a:hover {
+    color: black;
+    opacity: 1;
+}
+
+ .left-column .mapa, .right-column .mapa {
+    margin-top: 5%;
+    margin-left: -9%;
+    width: 80%;
+     height: 60%;
+
+}
+
+.left-column .mapa a, .right-column .mapa a{
+    padding: 0;
+}
+
+
+.right-column .mapa {
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+#sluzby, #sluzby2, #onas, #kontakt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.section-container, .section-container2 {
+    background-color: white;
+}
+
+.info-bar {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.info-bar p {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+footer {
+    background-color: rgb(255, 240, 243);
+    height: 50px;
+    padding-top: 0%;
+}
+
+footer p {
+    color:  rgb(216, 31, 55);
+    font-family: 'Jost';
+    font-weight: 200;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 1%;
+}
+
+
+@media screen and (max-width: 1440px) {
+    
+    .text-onas .facility {
+        margin-left: 2%;
+    }
+
+    .text-onas .reality {
+        margin-left: -11%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .text-onas > hr {
+        margin-top: 13%;
+    }
+
+    .text-onas .reality {
+        margin-top: 17%;
+        margin-left: -16%;
+    }
+
+    .text-onas .facility {
+        margin-top: 17%;
+        margin-left: -4%;
+    }
+
+    .text-onas .hlavni {
+        width: 50%;
+        margin-top: -20%;
+    }
+
+    .text-onas .podtim {
+        margin-right: 11%;
+    }
+
+    .radek1, .radek2, .radek3, .radek4 {
+        margin-left:  -2%;
+        margin-right: 2%;
+    }
+
+    .left-column .mapa, .right-column .mapa {
+
+        margin-bottom: 10%;
+
+    }
+
+    .footer {
+        height: 100Px;
+    }
+
+    .left-column .mapa, .right-column .mapa {
+        height: 50%;
+    }
+   
+    
+}
+
+@media screen and (min-width: 1100px) {
+
+.text-onas .reality {
+    margin-left: -14%;
+}
+
+.text-onas .facility {
+    margin-left: -2%;
+}
+
+}
+
+@media screen and (min-width: 1364px) {
+
+    .text-onas .reality {
+        margin-top: 5%;
+        margin-left: -11%;
+    }
+    
+    .text-onas .facility {
+        margin-left: 1%;
+        margin-top: 5%;
+
+    }
+
+    .text-onas h1 {
+        margin-top: -5%;
+    }
+
+    #onas {
+        height: 350px;
+    }
+
+    .text-onas .podtim {
+        margin-top: 0%;
+    }
+
+    .text-onas .ruce {
+        margin-top: -4%;
+        margin-right: 52%;
+    }
+
+    .text-onas > hr {
+        margin-top: 1%;
+    }
+
+    .text-onas .hlavni {
+        margin-top: -10%;
+    }
+
+    .left-column .mapa, .right-column .mapa {
+        width: 75%;
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+    .left-column .mapa, .right-column .mapa {
+        margin-top: 10%;
+    }
+
+    .left-column .mapa {
+        margin-left: -5%;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    
+.text-onas .reality {
+    margin-left: -9%;
+}
+
+}
+
+@media screen and (min-width: 1694px){
+
+    .left-column .mapa {
+        margin-left: -2%;
+    }
+
+    .left-column .mapa, .right-column .mapa {
+        width: 75%;
+        height: 700px;
+
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 1000px) {
+    
+footer {
+    height: 100px;
+}
+
+}
+
+@media screen and (min-width: 1269px) {
+
+.text-onas .reality {
+    margin-left: -12%;
+}
+
+.text-onas .facility {
+    margin-left: 0%;
+}
+
+}
+
+@media screen and (min-width: 1500px) {
+   
+    .text-onas .reality {
+        margin-left: -10%;
+    }
+    
+    .text-onas .facility {
+        margin-left: 2%;
+    }
+
+    .reference > hr {
+        width: 20%;
+    }
+
+}
+
+@media screen and (min-width: 1700px) {
+   
+    .text-onas .reality {
+        margin-left: -9%;
+    }
+    
+    .text-onas .facility {
+        margin-left: 2%;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 2019px) {
+
+.left-column .mapa {
+    margin-left: -5%;
+}
+
+}
+
+
+@media screen and (min-width: 2000px) {
+   
+    .text-onas .reality {
+        margin-left: -7.5%;
+    }
+    
+    .text-onas .facility {
+        margin-left: 2%;
+    }
+
+    .left-column img , .right-column img {
+        width: 3%;
+    }
+
+    .reference > hr {
+        width: 15%;
+        margin-top: -0.5%;
+    }
+
+}
+
+@media screen and (min-width: 2170px) {
+
+.left-column .mapa , .right-column .mapa {
+    width: 60%;
+    height: 700px;
+}
+
+}
+
+
+@media screen and (min-width: 2300px) {
+   
+    .text-onas .reality {
+        margin-left: -6%;
+        width: 8%;
+    }
+    
+    .text-onas .facility {
+        margin-left: 2%;
+        width: 8%;
+    }
+
+    .text-onas > hr {
+        margin-top: 1%;
+    }
+
+}
+
+@media screen and (min-width: 2300px) {
+
+.text-onas .hlavni {
+    margin-top: -2%;
+}
+
+.text-onas .podtim {
+    margin-top: 3%;
+}
+
+}
+@media screen and (max-width: 1859px){
+
+.mapa2, .mapa3 {
+    display: none;
+}
+
+}
+
+
+
+@media screen and (min-width: 1860px){
+.mapa {
+    display: none;
+}
+
+.left-column .email {
+    margin-right: -10%;
+}
+
+footer {
+margin-top: 30%;
+}
+
+.mapa2, .mapa3 {
+    width: 30%;
+    height: 500px;
+    align-items: center;
+}
+
+.mapa2 {
+    float: left;
+    margin-left: 10%;
+}
+
+.mapa3 {
+    float: right;
+    margin-right: 10%;
+}
+
+}
+
+@media screen and (min-width: 2250px) {
+    
+    .mapa2, .mapa3 {
+       width: 30%;
+       height: 550px;
+   }
+
+   .left-column, .right-column {
+    margin-top: 10%;
+   }
+
+   .text-onas > hr {
+    width: 18%;
+   }
+
+}
+
+@media screen and (min-width: 2550px) {
+
+    .left-column img , .right-column img {
+        width: 2%;
+    }
+
+    .left-column img {
+        margin-right: -5%;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+
+    .mapa2, .mapa3 {
+        height: 650px;
+    }
+
+    .left-column h3, .right-column h3 {
+        margin-top: -1%;
+    }
+
+}
+
+@media screen and (min-width: 1875px){
+
+    .left-column .mapa {
+        margin-left: -30%;
+    }
+
+
+    .text-onas h1 {
+        margin-top: -3%;
+    }
+
+    .text-onas .hlavni {
+        font-size: 25px;
+    }
+
+    .text-onas .ruce {
+        width: 2.5%;
+        margin-top: -3%;
+    }
+
+}
+
+@media screen and (min-width: 1700px) {
+    
+    .radek1 img, .radek2 img, .radek3 img, .radek4 img {
+        margin-right: 5%;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+
+    #onas {
+        height: 500px;
+    }
+
+    .text-onas .hlavni  {
+        float: none;
+        margin-left: 4%;
+        width: 90%;
+        margin-top: 30%;
+    }
+    .text-onas h1 {
+        margin-top: -27%;
+    }
+
+    .text-onas > hr {
+        width: 40%;
+        margin-top: -17%;
+    }
+    .text-onas .reality {
+        width: 15%;
+        margin-top: -11%;
+        margin-left: 23%;
+    }
+    .text-onas .facility {
+        width: 15%;
+        margin-top: -11%;
+        margin-left: 5%;
+    }
+
+    .text-onas .podtim {
+        float: left;
+        margin-left: 9%;
+        width: 80%;
+    }
+    .text-onas .ruce {
+        width: 4%;
+        float: left;
+        margin-right: 0;
+        margin-left: -85%;
+        margin-top: 1.5%;
+        
+    }  
+
+} 
+
+
+@media screen and (max-width: 795px) {
+
+.reference > hr{
+    width: 45%;
+} 
+
+    .checkboxtoggler {
+        display: flex;
+    }
+
+    .sidenav {
+        display: block;
+        color: rgb(216, 31, 55);
+    }
+
+    .uvodni .jedna, .uvodni .tri {
+        display: none;
+    }
+
+    .uvodni .dva {
+        display: block;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+
+    #onas {
+        height: 500px;
+    }
+    .text-onas .hlavni  {
+        float: none;
+        margin-left: 4%;
+        width: 90%;
+        margin-top: 30%;
+    }
+    .text-onas h1 {
+        margin-top: -27%;
+    }
+
+    .text-onas > hr {
+        width: 40%;
+        margin-top: -15%;
+    }
+    .text-onas .reality {
+        width: 15%;
+        margin-top: -11%;
+        margin-left: 23%;
+    }
+    .text-onas .facility {
+        width: 15%;
+        margin-top: -11%;
+        margin-left: 5%;
+    }
+
+    .text-onas .podtim {
+        float: left;
+        margin-left: 9%;
+        width: 80%;
+    }
+    .text-onas .ruce {
+        width: 4%;
+        float: left;
+        margin-right: 0;
+        margin-left: -85%;
+        margin-top: 2.5%;
+        
+    }
+    .radek1, .radek2, .radek3, .radek4 {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .reference {
+        padding-bottom: 15%;
+    }
+
+    .radek1 {
+        margin-left: -75%;
+        margin-top: -5%;
+    }
+
+    .radek2 {
+        margin-left: -25%;
+       margin-top: -84%;
+        
+    }
+
+   
+    .radek3 {
+        margin-left: 20%;
+        margin-top: -80%;
+        
+    }
+
+    .radek4 {
+        margin-left: 70%;
+        margin-top: -80%;
+    }
+
+    .radek1 img, .radek2 img , .radek3 img, .radek4 img {
+        margin: 0;
+        margin-top: 5%;
+    }
+
+    .radek2 img {
+        margin-top: 8%;
+    }
+
+    .radek3 img {
+        margin-top: 11%;
+    }
+
+    .radek4 img {
+        margin-top: 23%;
+    }
+
+
+    .rbs {
+        width: 13%;
+    }
+
+    .domape {
+        width: 8%;
+    }
+
+    .mahrina_residence {
+        width: 10%;
+    }
+
+    .bm {
+        width: 30%;
+    }
+
+    .reko {
+        width: 15%;
+    }
+
+    .budget {
+        width: 20%;
+    }
+
+    .gavlas {
+        width: 20%;
+    }
+
+    .icg {
+        width: 15%;
+    }
+
+    .kacmacek {
+        width: 65%;
+    }
+
+    .berounhills {
+        width: 65%;
+    }
+
+    .philips {
+        width: 30%;
+    
+    }
+
+    .tesco {
+        width: 55%;
+    }
+
+    .skylift {
+        width: 65%;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .image-text img {
+        width: 40%;
+    }
+
+    footer {
+        height: 100Px;
+    }
+    
+    footer p {
+        margin-top: 1%;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    .left-column .mapa, .right-column .mapa {
+
+        margin-bottom: 20%;
+        height: 50%;
+        width: 90%;
+    }
+
+    .left-column img, .right-column img {
+        width: 5%;
+    } 
+
+    .left-column .email {
+        margin-left: 2%;
+    }
+
+    .left-column .telefon {
+        margin-left: 3%;
+    }
+    
+}
+
+@media screen and (max-width: 795px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        padding: 10px;
+        color: rgb(216, 31, 55);
+    }
+    .nav-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 783px) {
+
+    .info-bar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        font-size: 30px;
+        
+    }
+
+    .info-bar > div {
+        text-align: center;
+    }
+
+    .info-bar .fajfka {
+        display: none;
+    }
+
+    .left-column img, .right-column img {
+        width: 7%;
+    }
+
+}
+
+@media screen and (max-width: 785px) {
+#sluzby, #sluzby2 {
+    height: 800px;
+}
+
+    .container, .container2 {
+        flex-direction: column; 
+        align-items: center;   
+    }
+
+    .image, .image2{
+        max-width: 70%; 
+        flex: none;
+        margin: 0;  
+    }
+
+    .image2 {
+        max-width: 85%;
+    }
+
+    .text, .text2 {
+        max-width: 100%; 
+        flex: none;
+        margin: 0; 
+        margin-top: 20px;
+    }
+    .text h1, .text h3, .text p, .text2 h1, .text2 h3, .text2 p{
+        text-align: center;
+    }
+
+    .text > hr{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .text2 > hr {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 786px) {
+    #sluzby2 .container2 {
+        flex-direction: row-reverse; 
+        padding-right: 0;
+    }
+
+    #sluzby2 .image2 {
+        margin-left: 5%; 
+    }
+
+    #sluzby2 .text2 {
+        margin-right: 0%; 
+    }
+    .text-onas {
+        padding-right: 0;
+    }
+}
+@media (max-width: 650px) {
+
+.text-onas .ruce {
+    width: 6%;
+    margin-left: -88%;
+}
+
+}
+
+@media screen and (min-width: 551px) {
+    .radek1_2, .radek2_2, .radek3_2, .radek4_2, .radek5, .radek6, .radek7 {
+        display: none;
+    }
+
+
+
+}
+
+@media screen and (max-width: 550px) {
+
+.radek1, .radek2, .radek3, .radek4 {
+    display:  none;
+}
+
+.radek1_2, .radek2_2, .radek3_2, .radek4_2, .radek5, .radek6, .radek7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.radek1_2 img, .radek2_2 img, .radek3_2 img, .radek4_2 img, .radek5 img, .radek6 img, .radek7 img {
+    margin-top: 5%;
+    
+}
+
+.uvodni .tri {
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.uvodni .dva {
+    display: none;
+}
+
+.rbs {
+    width: 30%;
+}
+.domape {
+    width: 25%;
+}
+.dolcevita {
+    width: 25%;
+}
+.mahrina_villa {
+    width: 20%;
+}
+.domoff {
+    width: 20%;
+}
+.mahrina_residence {
+    width: 20%;
+}
+.pneu {
+    width: 25%;
+}
+.beroun {
+    width: 25%;
+}
+.emotion {
+    width: 25%;
+}
+.domov {
+    width: 25%;
+}
+.bm {
+    width: 35%;
+}
+.reko {
+    width: 22%;
+}
+.budget {
+    width: 26%;
+}
+.gavlas {
+    width: 25%;
+}
+.icg {
+    width: 20%;
+}
+.kacmacek {
+    width: 30%;
+}
+.berounhills {
+    width: 30%;
+}
+.philips {
+    width: 15%;
+}
+.tesco {
+    width: 25%;
+}
+.skylift {
+    width: 35%;
+}
+.reference > hr {
+    width: 65%;
+}
+
+.reference h1 {
+    font-size: 40px;
+}
+}
+
+@media screen and (max-width: 690px) {
+
+    .columns-container {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 505px) {
+    
+    #onas {
+        height: 650px;
+    }
+
+    .text-onas h1 {
+        margin-top: -35%;
+    }
+
+    .text-onas .ruce {
+        margin-top: 4%;
+    }
+    .text-onas > hr {
+        margin-top: -20%;
+    }
+    .text-onas .reality {
+        width: 25%;
+        margin-top: -15%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .text-onas .facility {
+        width: 25%;
+        margin-top: -15%;
+        margin-left: 33%;
+        margin-bottom: 5%;
+    }
+#sluzby2 {
+    height: 900px;
+}
+
+}
+
+@media screen and (max-width: 405px) {
+    
+.text-onas .ruce {
+    margin-top: 5.5%;
+    width: 8%;
+    margin-left: -89%;
+}
+
+.text-onas > hr {
+    margin-top: -20%;
+    width: 55%;
+
+}
+
+.text-onas h1 {
+    margin-top: -40%;
+}
+
+}
+
+@media screen and (max-width: 345px) {
+
+.reference > hr {
+    width: 70%;
+}
+
+}

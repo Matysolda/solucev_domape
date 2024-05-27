@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img class="logo" src="images/ERSTE REALITY bez.png" alt="Logo"></a>
+        <input id="toggleChecker" type="checkbox">
+        <label id="togglerLable" for="toggleChecker"style=" margin-right: 5%">
+          <div class="checkboxtoggler">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+        </label>
+
+        <div class="sidenav">
+            
+            <a class="menu1" href="#sluzby">Služby</a>
+            <a class="menu" href="#onas">O nás</a>
+            <a class="menu" href="#reference">Reference</a>
+            <a class="menu" href="#kontakt">Kontakt</a>
+        </div>
+
+        <ul>            
+            <li><a class="menu" href="#sluzby">Služby</a></li>
+            <li><a class="menu" href="#onas">O nás</a></li>
+            <li><a class="menu" href="#reference">Reference</a></li>
+            <li><a class="menu" href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <script>
+    document.getElementById('toggleChecker').addEventListener('change', function() {
+        var sideNav = document.querySelector('.sidenav');
+        if (this.checked) {
+            sideNav.style.width = "250px"; 
+        } else {
+            sideNav.style.width = "0"; 
+        }
+    });
+
+    function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+  }
+    </script>
+
+    <div class="uvodni">
+    <img class="jedna"   src="images/uvodni.png" >
+    <img class="dva"   src="images/uvodni2.png">
+    <img class="tri"   src="images/uvodni3.png">
+    </div>
+    <div class="info-bar">
+        <div>25 let na trhu</div>
+        <span class="fajfka" style="vertical-align: middle;">&#10004;</span>
+        <div>150 spokojených klientů </div>
+        <span class="fajfka"  style="vertical-align: middle;">&#10004;</span>
+        <div>100% spolehlivost </div>
+        
+    </div>
+    <div class="grid-container">
+        <div id="sluzby" class="section-container">
+            <div class="section-content">
+                <div class="container">
+                    <div class="image">
+                        <img src="images/img3.png">
+                    </div>
+                    <div class="text">
+                        <h1>Realitní služby</h1>
+                        <h3>Real Estate Services</h3>
+                        <hr>
+                        <p>ㅤprodej a pronájem bytů / domů / nebytových prostorů </p>
+                        <p>ㅤprodej a pronájem parkovacích míst / garáží </p>
+                        <p>ㅤvyhledávání investičních příležitostí v Česku i v zahraničí </p>
+                        <p>ㅤporadenství a konzultace, včetně investic, strategií i legislativy</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>               
+              
+        
+
+        <div id="sluzby2" class="section-container2">
+            <div class="section-content2">
+                <div class="container2">
+                    <div class="image2">
+                        <img src="images/img6.png">
+                    </div>
+                    <div class="text2">
+                        <h1>Erste Facility</h1>
+                        <h3>Real Estate management</h3>
+                        <hr>
+                        <p>ㅤkomplexní technická a účetní správa nemovitostí </p>
+                        <p>ㅤnonstop technický servis a podpora</p>
+                        <p>ㅤjednoduché a spolehlivé oceňování nemovitostí</p>
+                        <p>ㅤplánování a řízení stavebních a renovačních projektů </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <div id="onas" class="section-container3">
+            <div class="section-content3">
+                <div class="container3">
+                    <div class="text-onas">
+                        <h1>O nás</h1>
+                        <hr>
+                        <img    class="reality"   src="images/ERSTE REALITY_logo_bílé REALITY.svg"/>
+                        <img  class="facility"   src="images/ERSTE FACILITY logo_bile FACILITY.svg"/>
+                        <p class="hlavni">Obchodní strategie společnosti ERSTE REALITY reflektuje 30 let zkušeností s 
+                            investováním do nemovitostí či jejich správou. Na realitním trhu zajišťujeme dlouhodobý i 
+                            krátkodobý pronájem nemovitostí a pro naše klienty aktivně vyhledáváme investiční příležitostí
+                            v Česku i za hranicemi. V roce 2020 jsme portfolio služeb naší společnost rozšířili o divizi
+                            ERSTE FACILITY zajišťující komplexní správu nemovitostí.
+                        </p>
+                            <p class="podtim">150 spokojených zákazníků</p>
+                            <img class="ruce" src="images/handshake.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div  id="reference"  class="reference">
+            <h1>Reference</h1>
+            <hr>
+            <div class="radek1">
+                <img class="rbs"   src="images/rbs.png" width="22%">
+                <img class="domape"   src="images/domape_logo.png" width="14%" >
+                <img class="dolcevita"   src="images/dolcevita.png" width="10%">
+                <img class="mahrina_villa"   src="images/mahrina_villa.png" width="8%">
+                <img class="domoff"   src="images/domoff.png" width="12%">
+            </div>
+            <div class="radek2">
+                <img class="mahrina_residence"   src="images/mahrina_residence.png" width="8%">
+                <img class="pneu"   src="images/pneu-prochazka.png" width="13%">
+                <img class="beroun"   src="images/beroun.png" width="12%">
+                <img class="emotion"   src="images/emotion-cars.svg" width="11%">
+                <img class="domov"   src="images/logo DOMOV REALITY 1.png" width="15%">
+            </div>
+            <div class="radek3">
+                <img class="bm"   src="images/logo-BM.svg" width="20%">
+                <img class="reko"   src="images/logo REKO Reality.webp" width="10%">
+                <img class="budget"   src="images/Budget_logo.svg" width="15%">
+                <img class="gavlas"   src="images/gavlas.png" width="10%">
+                <img class="icg"   src="images/download__kopie_-removebg-preview.png" width="7%">
+            </div>
+            <div class="radek4">
+                <img class="kacmacek"   src="images/logo_kacmacek-removebg-preview.png" width="17%">
+                <img class="berounhills"   src="images/beroun hills.png" width="16%">
+                <img class="philips"   src="images/philips.png" width="5%">
+                <img class="tesco"   src="images/tesco.png" width="13%">
+                <img class="skylift"   src="images/skylift.png" width="13%">
+               
+            </div>
+
+            <div class="radek1_2">
+                <img class="rbs"   src="images/rbs.png" width="22%">
+                <img class="domape"   src="images/domape_logo.png" width="14%" >
+                <img class="dolcevita"   src="images/dolcevita.png" width="10%">
+            </div>
+
+            <div class="radek2_2">
+                <img class="mahrina_villa"   src="images/mahrina_villa.png" width="8%">
+                <img class="domoff"   src="images/domoff.png" width="12%">
+                <img class="mahrina_residence"   src="images/mahrina_residence.png" width="8%">
+            </div>
+
+            <div class="radek3_2">
+                <img class="pneu"   src="images/pneu-prochazka.png" width="13%">
+                <img class="beroun"   src="images/beroun.png" width="12%">
+                <img class="emotion"   src="images/emotion-cars.svg" width="11%">
+            </div>
+
+            <div class="radek4_2">
+                <img class="domov"   src="images/logo DOMOV REALITY 1.png" width="15%">
+                <img class="bm"   src="images/logo-BM.svg" width="20%">
+                <img class="reko"   src="images/logo REKO Reality.webp" width="10%">
+            </div>
+
+            <div class="radek5">
+                <img class="budget"   src="images/Budget_logo.svg" width="15%">
+                <img class="gavlas"   src="images/gavlas.png" width="10%">
+                <img class="icg"   src="images/download__kopie_-removebg-preview.png" width="7%">
+            </div>
+
+            <div class="radek6">
+                <img class="kacmacek"   src="images/logo_kacmacek-removebg-preview.png" width="17%">
+                <img class="berounhills"   src="images/beroun hills.png" width="16%">
+                <img class="philips"   src="images/philips.png" width="5%">
+            </div>
+
+            <div class="radek7">
+                <img class="tesco"   src="images/tesco.png" width="13%">
+                <img class="skylift"   src="images/skylift.png" width="13%">
+            </div>
+
+
+
+        </div>
+
+
+        
+        <div id="kontakt" class="section-container">
+            <div class="section-content kontakt">
+                <div class="image-text">
+                    <img src="images/ERSTE REALITY bez.png" alt="Logo" width="20%">
+                    <p>IČ: 10803815</p>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="columns-container">
+            <div class="left-column">
+                <h2>Praha</h2>
+                <h3>Centrála</h3>
+                <p>V zářezu 902/6 <br>
+                    158 00 Praha 5</p>
+                    <img  src="images/telephone.png"> <a class="telefon" href="tel:+420606603012">606 603 012</a> <br>
+                    <img  src="images/email.png">  <a class="email" href="mailto:info@erste-reality.cz">info@erste-reality.cz</a>
+                    <a href="https://maps.app.goo.gl/4dT9icb21ZBDYmFW8"> <img class="mapa" src="images/mapapraha.png"> </a>
+                    </div>
+
+
+
+            <div class="right-column">
+                <h2>Beroun</h2>
+                <h3>Správa nemovitostí</h3>
+                <p>Nepilova 1980 <br>
+                    266 01 Beroun</p>
+                    <img class="telefon" src="images/telephone.png"> <a href="tel:+420777233593">777 233 593</a> <br>
+                    <img class="email" src="images/email.png"> <a href="mailto:info@erste-reality.cz">info@erste-reality.cz</a> <br>
+                    <a  href="https://maps.app.goo.gl/Sf2PvAySxCRguiM28"><img class="mapa" src="images/mapaberoun.png"></a>
+            </div>
+
+        </div>
+        <a href="https://maps.app.goo.gl/4dT9icb21ZBDYmFW8"> <img class="mapa2" src="images/mapapraha.png"> </a>
+
+        <a  href="https://maps.app.goo.gl/Sf2PvAySxCRguiM28"><img class="mapa3" src="images/mapaberoun.png"></a>
+
+    </div>
+
+
+<footer>
+    <p>© 2024 ERSTE-REALITY - všechna práva vyhrazena</p>
+</footer>
+
+
+
+
+
+</body>
+
+</html>
