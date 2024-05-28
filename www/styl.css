@@ -1514,7 +1514,11 @@ a img {
 }
 
 .reference h1 {
-    font-size: 40px;
+    font-size: 38px;
+}
+
+.text-onas h1 {
+    font-size: 38px;
 }
 }
 
