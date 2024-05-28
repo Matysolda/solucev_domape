@@ -253,21 +253,21 @@ a img {
 }
 
 
-.text, .text2 {
+.text, .text-mob, .text2-mob, .text2 {
     font-family: 'Raxtor';
     font-size: 20px;
     flex: 1;
 }
 
-.text {
+.text, .text-mob {
     margin-left: 5%;
 }
 
-.text2 {
+.text2, .text2-mob {
     margin-top: 0%;
 }
 
-.text h1, .text2 h1 {
+.text h1,.text-mob h1, .text2 h1, .text2-mob h1 {
     font-size: 50px;
     font-family: 'Jost';
     font-weight: 1000;
@@ -275,19 +275,19 @@ a img {
     margin-left: -0.5%;
 }
 
-.text h3, .text2 h3 {
+.text h3,.text-mob h3, .text2 h3, .text2-mob h3 {
     margin-top: -5%;
     color: rgb(216, 31, 55);
 }
 
-.text > hr{
+.text > hr, .text-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
     width: 65%;
     margin-left: -0.1%;
 }
 
-.text2 > hr {
+.text2 > hr, .text2-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
     width: 72%;
@@ -300,12 +300,12 @@ a img {
     font-size: 25px;
 }
 
-.text p, .text2 p {
+.text p,.text-mob p, .text2 p, .text2-mob p {
     font-family: 'Arial';
 }
 
 
-#sluzby2 {
+#sluzby2, .sluzby2_mobil {
     background-color: rgb(255, 240, 243);
 }
 
@@ -1307,9 +1307,38 @@ margin-top: 30%;
 
 }
 
+@media screen and (min-width: 786px) {
+#sluzby_mobil, #sluzby2_mobil {
+    display: none;
+}
+
+}
+
+
 @media screen and (max-width: 785px) {
 #sluzby, #sluzby2 {
-    height: 800px;
+    display: none;
+}
+
+#sluzby_mobil, #sluzby2_mobil {
+    height: 900px;
+    padding-top: 10%;
+}
+
+#sluzby_mobil, #sluzby2_mobil  {
+    padding-bottom: 10%;
+}
+
+ #sluzby2_mobil {
+    background-color: rgb(255, 240, 243);
+    height: 900px;
+}
+
+.text-mob p::before, .text2-mob p::before {
+    content: "•"; 
+    color: rgb(216, 31, 55);
+    font-size: 25px;
+
 }
 
     .container, .container2 {
@@ -1327,22 +1356,22 @@ margin-top: 30%;
         max-width: 85%;
     }
 
-    .text, .text2 {
+    .text-mob, .text2-mob {
         max-width: 100%; 
         flex: none;
         margin: 0; 
         margin-top: 20px;
     }
-    .text h1, .text h3, .text p, .text2 h1, .text2 h3, .text2 p{
+    .text-mob h1, .text-mob h3, .text-mob p, .text2-mob h1, .text2-mob h3, .text2-mob p{
         text-align: center;
     }
 
-    .text > hr{
+    .text-mob > hr{
         width: 70%;
         margin: 0 auto;
     }
 
-    .text2 > hr {
+    .text2-mob > hr {
         width: 85%;
         margin: 0 auto;
     }
@@ -1358,7 +1387,7 @@ margin-top: 30%;
         margin-left: 5%; 
     }
 
-    #sluzby2 .text2 {
+    #sluzby2 .text2-mob {
         margin-right: 0%; 
     }
     .text-onas {
@@ -1381,12 +1410,18 @@ margin-top: 30%;
 
 
 
+
 }
 
 @media screen and (max-width: 550px) {
 
 .radek1, .radek2, .radek3, .radek4 {
     display:  none;
+}
+
+a img {
+    height: auto;
+    width: 50%;
 }
 
 .radek1_2, .radek2_2, .radek3_2, .radek4_2, .radek5, .radek6, .radek7 {
@@ -1518,7 +1553,7 @@ margin-top: 30%;
         margin-left: 33%;
         margin-bottom: 5%;
     }
-#sluzby2 {
+#sluzby2_mobil {
     height: 900px;
 }
 
@@ -1542,11 +1577,19 @@ margin-top: 30%;
     margin-top: -40%;
 }
 
+a img {
+    width: 60%;
+}
+
 }
 
 @media screen and (max-width: 345px) {
 
 .reference > hr {
+    width: 70%;
+}
+
+a img {
     width: 70%;
 }
 
