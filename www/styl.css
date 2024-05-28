@@ -1339,6 +1339,8 @@ margin-top: 30%;
     color: rgb(216, 31, 55);
     font-size: 25px;
     margin-right: 5%;
+    line-height: 1; 
+    vertical-align: middle; 
 }
 
     .container, .container2 {
