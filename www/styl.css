@@ -284,14 +284,14 @@ a img {
 .text > hr, .text-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
-    width: 75%;
+    width: 85%;
     margin-left: -0.1%;
 }
 
 .text2 > hr, .text2-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
-    width: 82%;
+    width: 90%;
     margin-left: -0.1%;
 }
 
