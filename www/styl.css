@@ -260,11 +260,12 @@ a img {
 }
 
 .text, .text-mob {
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .text2, .text2-mob {
     margin-top: 0%;
+    margin-right: 5%;
 }
 
 .text h1,.text-mob h1, .text2 h1, .text2-mob h1 {
@@ -283,14 +284,14 @@ a img {
 .text > hr, .text-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
-    width: 65%;
+    width: 75%;
     margin-left: -0.1%;
 }
 
 .text2 > hr, .text2-mob > hr {
     border-color: rgb(216, 31, 55);
     border: 1px solid rgb(216, 31, 55);
-    width: 72%;
+    width: 82%;
     margin-left: -0.1%;
 }
 
@@ -1565,6 +1566,7 @@ a img {
 
 }
 
+
 @media screen and (max-width: 405px) {
     
 .text-onas .ruce {
@@ -1598,5 +1600,20 @@ a img {
 a img {
     width: 70%;
 }
+
+}
+@media screen and (max-width: 450px) {
+
+    .text-onas .ruce {
+        margin-top: 5.5%;
+    
+    }
+    }
+
+@media screen and (max-width: 312px) {
+
+    .text-onas .ruce {
+        margin-top: 7%;
+    }
 
 }
