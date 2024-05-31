@@ -653,6 +653,39 @@ footer {
     transform: scale(1.5);
 }
 
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .cookie-message {
+    font-weight: 200;
+    font-family: 'Jost';
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  .cookie-message a {
+    font-size: 20px;
+  }
+  
+  .cookie-buttons button {
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
 @media (max-width: 400px) {
     .footer-container {
         flex-direction: column;
