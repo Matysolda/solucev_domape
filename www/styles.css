@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -22,7 +25,7 @@ header {
 }
 
 .logo {
-    height: 50px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
 }
 
 .logo img {
@@ -106,6 +109,10 @@ nav {
     border-radius: 5px;
 }
 
+.button:hover {
+    background-color: darkblue;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -171,6 +178,11 @@ nav {
     align-items: center;
 }
 
+.about-content p i {
+    font-size: 54px;
+    margin-right: 10px;
+    color: #333; /* Arrow color */
+}
 .custom-bullet {
     font-size: 24px;
     margin-right: 10px;
