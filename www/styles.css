@@ -317,3 +317,162 @@ header {
     }
 }
 
+/* References Section */
+.references {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.references h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.logos-container {
+    display: flex;
+    flex-wrap: wrap; /* Umožňuje přetékání do dalších řádků */
+    justify-content: center; /* Centrovat loga */
+    gap: 20px; /* Mezera mezi logy */
+}
+
+.logo-item {
+    flex: 1 1 150px; /* Flexibilní šířka a minimální šířka 150px */
+    max-width: 200px; /* Maximální šířka pro větší obrazovky */
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-item img {
+    width: 100%; /* Logo se přizpůsobí kontejneru */
+    height: auto; /* Zachování poměru stran */
+    display: block;
+    margin: 0 auto; /* Centrovat loga */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo-item {
+        flex: 1 1 100px; /* Flexibilní šířka a minimální šířka 100px */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-item {
+        flex: 1 1 80px; /* Flexibilní šířka a minimální šířka 80px pro velmi malé obrazovky */
+    }
+}
+
+/* Kontakt Section */
+.kontakt {
+    padding: 60px 20px;
+    background-color: #000; /* Černé pozadí */
+    color: #fff; /* Bílý text */
+    text-align: center;
+}
+
+.kontakt h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.kontakt-container {
+    display: flex;
+    flex-wrap: wrap; /* Umožňuje přetékání do dalších řádků na menších zařízeních */
+    justify-content: space-between; /* Prostor mezi sloupci */
+    align-items: flex-start; /* Zarovnání k horní části */
+}
+
+.kontakt-info {
+    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
+    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+    text-align: left; /* Zarovnání vlevo */
+    padding: 20px;
+}
+
+.kontakt-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.kontakt-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kontakt-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.kontakt-mapa {
+    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
+    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa {
+    background-color: #0d3c7c; /* Barva pozadí pro mapu */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Kulatý tvar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Bílý text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column; /* Změna na vertikální uspořádání na menších obrazovkách */
+        align-items: center; /* Centrovat položky */
+    }
+
+    .kontakt-info, .kontakt-mapa {
+        max-width: 100%; /* Zajištění plné šířky */
+        text-align: center; /* Centrovat text */
+    }
+}
+
+.footer {
+    background-color: #2c2c2c; /* Tmavě šedá barva */
+    color: #ffffff; /* Bílá barva textu */
+    padding: 20px 0; /* Vertikální a horizontální odsazení */
+    text-align: center; /* Zarovnání textu na střed */
+    font-family: Arial, sans-serif; /* Font pro text */
+  }
+  
+  .footer-content p {
+    margin: 5px 0; /* Odsazení mezi odstavci */
+    font-size: 14px; /* Velikost písma */
+  }
+  
+  .footer-content a {
+    color: #ffffff; /* Barva odkazu */
+    text-decoration: none; /* Bez podtržení odkazu */
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline; /* Podtržení odkazu při najetí myší */
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px 0; /* Menší odsazení na menších obrazovkách */
+    }
+    
+    .footer-content p {
+      font-size: 12px; /* Menší velikost písma na menších obrazovkách */
+    }
+  }
+
