@@ -152,7 +152,7 @@ header {
 
 .about-us {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Light background to contrast the hero section */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -166,7 +166,7 @@ header {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
-    padding: 0 15px; /* Add some padding for smaller screens */
+    padding: 0 15px;
 }
 
 .about-content p {
@@ -181,31 +181,99 @@ header {
 .about-content p i {
     font-size: 54px;
     margin-right: 10px;
-    color: #333; /* Arrow color */
+    color: #333;
 }
+
 .custom-bullet {
     font-size: 24px;
     margin-right: 10px;
     color: #333; /* Bullet color */
 }
 
+
+
+
+.info-bar {
+    display: inline-block; /* Zajišťuje, že rámeček nebude příliš dlouhý */
+    padding: 20px;
+    background-color: #e0e0e0; /* Světle šedé pozadí */
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  14px 14px 28px #bebebe,
+                 -14px -14px 28px #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.info-bar p {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .info-bar {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-bar{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        font-size: 20px;
+        
+    }
+
+    .info-bar > div {
+        text-align: center;
+    }
+
+    .info-bar .fajfka {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .info-bar {
+        width: 90%;
+        font-size: 13px;
+    }
+
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about-us {
-        padding: 40px 10px; /* Reduce padding on smaller screens */
+        padding: 40px 10px;
     }
 
     .about-us h2 {
-        font-size: 28px; /* Adjust font size for smaller screens */
-        margin-bottom: 20px; /* Reduce margin */
+        font-size: 28px;
+        margin-bottom: 20px;
     }
 
     .about-content p {
-        font-size: 16px; /* Smaller font size for better readability */
-        line-height: 1.4; /* Adjust line height */
-        margin-bottom: 15px; /* Reduce margin between paragraphs */
-        flex-direction: column; /* Stack text and bullet vertically */
-        align-items: flex-start; /* Align text to the start */
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .highlight-section {
+        font-size: 18px;
+        padding: 15px;
     }
 
     .custom-bullet {
@@ -215,13 +283,17 @@ header {
 
 @media (max-width: 480px) {
     .about-us h2 {
-        font-size: 24px; /* Further reduce font size for very small screens */
+        font-size: 24px;
     }
 
     .about-content p {
-        font-size: 14px; /* Further reduce font size */
-        line-height: 1.4;
-        margin-bottom: 10px; /* Further reduce margin */
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .highlight-section {
+        font-size: 16px;
+        padding: 10px;
     }
 
     .custom-bullet {
@@ -252,10 +324,6 @@ header {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.service-item.reverse {
-    flex-direction: row-reverse; /* Reverse direction for alternating effect */
-}
-
 .service-text {
     flex: 1;
     padding: 20px;
@@ -268,7 +336,8 @@ header {
 }
 
 .service-text p {
-    font-size: 18px;
+    margin-left: 30%;
+    font-size: 21px;
     margin-bottom: 15px;
     color: #ddd; /* Light color for better readability */
 }
@@ -317,52 +386,63 @@ header {
     }
 }
 
-/* References Section */
-.references {
+/* Career Section */
+.career {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff; /* Bílé pozadí */
+    color: #333; /* Tmavý text pro lepší kontrast na bílém pozadí */
     text-align: center;
 }
 
-.references h2 {
+.career h2 {
     font-size: 36px;
     margin-bottom: 40px;
     font-family: "Racing Sans One", sans-serif;
+    color: #000; /* Černý text */
 }
 
-.logos-container {
+.career-content {
     display: flex;
-    flex-wrap: wrap; /* Umožňuje přetékání do dalších řádků */
-    justify-content: center; /* Centrovat loga */
-    gap: 20px; /* Mezera mezi logy */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.logo-item {
-    flex: 1 1 150px; /* Flexibilní šířka a minimální šířka 150px */
-    max-width: 200px; /* Maximální šířka pro větší obrazovky */
-    padding: 10px;
-    text-align: center;
+.career-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Světlé šedé boxy */
+    border: 1px solid #ddd; /* Světlejší rámeček pro boxy */
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín pro modernější vzhled */
 }
 
-.logo-item img {
-    width: 100%; /* Logo se přizpůsobí kontejneru */
-    height: auto; /* Zachování poměru stran */
-    display: block;
-    margin: 0 auto; /* Centrovat loga */
+.career-item h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000; /* Černý text */
 }
 
-/* Responsive Styles */
+.career-item p {
+    font-size: 18px;
+    color: #666; /* Tmavší šedý text */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .logo-item {
-        flex: 1 1 100px; /* Flexibilní šířka a minimální šířka 100px */
+    .career-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .career-item {
+        max-width: 80%;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .logo-item {
-        flex: 1 1 80px; /* Flexibilní šířka a minimální šířka 80px pro velmi malé obrazovky */
-    }
-}
 
 /* Kontakt Section */
 .kontakt {
@@ -475,4 +555,5 @@ header {
       font-size: 12px; /* Menší velikost písma na menších obrazovkách */
     }
   }
+
 
