@@ -420,11 +420,13 @@ header {
     flex: 1;
     min-width: 250px;
     padding: 20px;
-    background-color: #f0f0f0; /* Světlé šedé boxy */
-    border: 1px solid #ddd; /* Světlejší rámeček pro boxy */
-    border-radius: 10px;
     margin: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín pro modernější vzhled */
+    background-color: #e0e0e0; /* Světle šedé pozadí */
+    border-radius: 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  14px 14px 28px #bebebe,
+                 -14px -14px 28px #ffffff;
+    text-align: left; /* Zarovnat text vlevo */
 }
 
 .career-item h3 {
@@ -432,10 +434,16 @@ header {
     margin-bottom: 15px;
     color: #000; /* Černý text */
 }
-
 .career-item p {
     font-size: 18px;
     color: #666; /* Tmavší šedý text */
+}
+
+.career-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 /* Responsive Design */
