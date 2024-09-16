@@ -133,7 +133,7 @@ header {
 .hero-content p {
     font-family: "Open Sans";
     color: #ECC7AC;
-    font-size: 34px;
+    font-size: 28px;
     margin: 10px 0;
 }
 
@@ -303,9 +303,10 @@ header {
 
 
 /* Services Section */
+/* Services Section */
 .services {
     padding: 60px 20px;
-    background-color: #111; /* Dark background to contrast with other sections */
+    background-color: #111;
     color: white;
     text-align: center;
 }
@@ -316,37 +317,44 @@ header {
     font-family: "Racing Sans One", sans-serif;
 }
 
-.service-item {
+.services-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.service-text {
-    flex: 1;
+.service-box {
+    background-color: #333;
+    border-radius: 10px;
     padding: 20px;
-    text-align: left;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-text h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.service-text p {
-    margin-left: 30%;
-    font-size: 21px;
-    margin-bottom: 15px;
-    color: #ddd; /* Light color for better readability */
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ECC7AC; /* Světlá barva ikon */
 }
 
-.service-text ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #bbb; /* Adjusted for readability */
+.service-box h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff; /* Bílá barva textu */
 }
+
+
+
+
+
 
 .service-text ul li {
     margin-bottom: 10px;
@@ -483,7 +491,9 @@ header {
     align-items: center;
     margin-bottom: 10px;
 }
-
+.kontakt-item span a:hover {
+    color: #ECC7AC;
+}
 .kontakt-item .icon {
     width: 24px;
     height: 24px;
@@ -493,7 +503,7 @@ header {
 
 .kontakt-mapa {
     flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
-    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+ 
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -501,10 +511,8 @@ header {
 }
 
 .mapa {
-    background-color: #0d3c7c; /* Barva pozadí pro mapu */
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* Kulatý tvar */
+    margin-top: -10%;
+    margin-right: -30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -536,6 +544,10 @@ header {
     margin: 5px 0; /* Odsazení mezi odstavci */
     font-size: 14px; /* Velikost písma */
   }
+
+  .footer-content .creator {
+    font-size: 12px;
+  }
   
   .footer-content a {
     color: #ffffff; /* Barva odkazu */
@@ -555,5 +567,4 @@ header {
       font-size: 12px; /* Menší velikost písma na menších obrazovkách */
     }
   }
-
-
+  
