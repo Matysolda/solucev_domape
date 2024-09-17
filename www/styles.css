@@ -1,578 +1,186 @@
-html {
-    scroll-behavior: smooth;
-}
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #ECC7AC;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-    z-index: 300;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        width: 250px; /* Šířka menu */
-        position: fixed;
-        top: 0;
-        right: -250px; /* Skryté mimo obrazovku napravo */
-        height: 100vh;
-        background-color: #000;
-        padding-top: 60px;
-        transition: transform 0.3s ease;
-        z-index: 0;
-    }
-
-    .nav-links.nav-active {
-        transform: translateX(-250px); /* Posune menu do pohledu */
-    }
-
-    .nav-links a {
-        padding: 15px 20px;
-        display: block;
-    }
-
-    .burger {
-        display: block;
-        z-index: 300;
-    }
-
-    .burger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <link rel="icon" href="img/domape_logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domape</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/domape_bila.png" alt="Domape Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">O nás</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#career">Kariéra</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
     
-    .burger.toggle .line2 {
-        opacity: 0;
-    }
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Domape</h1>
+                <p>Řídíme váš růst k úspěchu</p>
+                <a href="#services" class="button">Zjistit více</a>
+            </div>
+        </section>
     
-    .burger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-
-
-
-.hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/matysoldax_realistic_business_office_group_of_people_working__64318472-5262-43e2-9bda-d7f95f12aba1_0.png'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    margin-top: 60px; /* To prevent content from hiding under fixed header */
-    position: relative;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1; /* Ensure text is above the overlay */
-}
-
-.hero-content h1 {
-    font-family: "Racing Sans One", sans-serif;
-    font-size: 60px;
-}
-.hero-content p {
-    font-family: "Open Sans";
-    color: #ECC7AC;
-    font-size: 28px;
-    margin: 10px 0;
-}
-
-.button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: darkblue;
-}
-
-
-.about-us {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.about-us h2 {
-    font-size: 36px;
-    font-family: "Racing Sans One", sans-serif;
-    margin-bottom: 30px;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 0 15px;
-}
-
-.about-content p {
-    font-family: "Open Sans";
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.about-content p i {
-    font-size: 54px;
-    margin-right: 10px;
-    color: #333;
-}
-
-.custom-bullet {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #333; /* Bullet color */
-}
-
-
-
-
-.info-bar {
-    display: inline-block; /* Zajišťuje, že rámeček nebude příliš dlouhý */
-    padding: 20px;
-    background-color: #e0e0e0; /* Světle šedé pozadí */
-    border-radius: 50px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  14px 14px 28px #bebebe,
-                 -14px -14px 28px #ffffff;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
-    font-size: 22px;
-    margin-bottom: 0px;
-}
-
-.info-bar p {
-    font-size: x-large;
-    display: flex;
-    align-items: center;
-}
-@media (max-width: 1024px) {
-    .info-bar {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .info-bar{
-        width: 80%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr;
-        font-size: 20px;
+       
+<!-- About Us Section -->
+<section class="about-us" id="about">
+    <h2>O naší společnosti</h2>
+    <div class="about-content">
+        <p><i class="ri-arrow-right-s-fill"></i> Domape je dynamická a inovativní firma zaměřená na poskytování špičkových poradenských služeb v oblasti projektového managementu a strategického rozvoje. S více jak dvacetiletou zkušeností na trhu jsme se stali důvěryhodným partnerem pro malé a střední podniky, stejně jako pro velké korporace.</p>
+        <p><i class="ri-arrow-right-s-fill"></i> Naším cílem je pomáhat klientům realizovat jejich vize a dosáhnout úspěchu prostřednictvím efektivního plánování, řízení rizik a optimalizace procesů. Díky našemu týmu odborníků a individuálnímu přístupu ke každému projektu dokážeme navrhnout řešení šitá na míru, která nejen splňují, ale i překonávají očekávání.</p>
+    </div>
+    <div class="info-bar">
+        <div>více než 25 let na trhu</div>
+        <span class="fajfka" style="vertical-align: middle;"><i class="ri-arrow-right-s-fill"></i></span>
+        <div>více než 30 expertů</div>
+        <span class="fajfka"  style="vertical-align: middle;"><i class="ri-arrow-right-s-fill"></i></span>
+        <div>zastoupení Praha & Plzeň</div>
         
-    }
-
-    .info-bar > div {
-        text-align: center;
-    }
-
-    .info-bar .fajfka {
-        display: none;
-    }
+    </div>
+   
+</section>
 
 
-}
 
-@media screen and (max-width: 480px) {
     
-    .info-bar {
-        width: 90%;
-        font-size: 13px;
-    }
+    <!-- Service 1 -->
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2>Naše služby</h2>
+    <div class="services-container">
+        <div class="service-box">
+            <i class="ri-briefcase-2-line service-icon"></i>
+            <h3>Auditní služby</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-rocket-line service-icon"></i>
+            <h3>Consulting</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-user-line service-icon"></i>
+            <h3>Lidský kapitál</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-booklet-line service-icon"></i>
+            <h3>Školící programy</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-tools-line service-icon"></i>
+            <h3>Back Office</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-alert-line service-icon"></i>
+            <h3>Krizový management</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-line-chart-line service-icon"></i>
+            <h3>Strategické poradenství</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-bar-chart-line service-icon"></i>
+            <h3>Investiční poradenství</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-building-line service-icon"></i>
+            <h3>Investiční příležitosti</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-home-line service-icon"></i>
+            <h3>Realitní služby</h3>
+        </div>
+        <div class="service-box">
+            <i class="ri-folder-line service-icon"></i>
+            <h3>Správa nemovitostí</h3>
+        </div>
+    </div>
+</section>
 
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .about-us {
-        padding: 40px 10px;
-    }
-
-    .about-us h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .about-content p {
-        font-size: 16px;
-        line-height: 1.4;
-        margin-bottom: 15px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .highlight-section {
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .custom-bullet {
-        margin-bottom: 5px; /* Add space between bullet and text */
-    }
-}
-
-@media (max-width: 480px) {
-    .about-us h2 {
-        font-size: 24px;
-    }
-
-    .about-content p {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .highlight-section {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .custom-bullet {
-        font-size: 20px; /* Slightly smaller bullet */
-    }
-}
+</section>
 
 
-/* Services Section */
-/* Services Section */
-.services {
-    padding: 60px 20px;
-    background-color: #111;
-    color: white;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-family: "Racing Sans One", sans-serif;
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.service-box {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.service-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #ECC7AC; /* Světlá barva ikon */
-}
-
-.service-box h3 {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #fff; /* Bílá barva textu */
-}
+<!-- Career Section (new) -->
+<!-- Career Section (updated) -->
+<section class="career" id="career">
+    <h2>Kariéra</h2>
+    <div class="career-content">
+        <div class="career-item">
+            <img src="img/matysoldax_corporate_coaching_--sref_httpss.mj.runYwqt013vwv0_20ee4b3c-ef9f-4c78-bdd5-8d4d09ca5217_3.png" alt="Unikátní projekty" class="career-image">
+            <h3>Unikátní projekty</h3>
+            <p>Pracujeme na projektech, které jsou inovativní a mají významný dopad v různých průmyslových odvětvích.</p>
+        </div>
+        <div class="career-item">
+            <img src="img/matysoldax_corporate_coaching_--sref_httpss.mj.runYwqt013vwv0_87477b0f-7b36-4fe9-99f6-dfe5df88ea86_2.png" alt="Expertní tým" class="career-image">
+            <h3>Expertní tým</h3>
+            <p>Náš tým se skládá z více než 30 odborníků, kteří pokrývají různé byznysové oblasti, od projektového managementu až po strategické poradenství.</p>
+        </div>
+        <div class="career-item">
+            <img src="img/matysoldax_httpss.mj.runYwqt013vwv0_corporate_coaching_--v_6._788e7fe1-9bb6-41ed-ac28-ffaa49688eed_2.png" alt="Moderní technologie" class="career-image">
+            <h3>Moderní technologie</h3>
+            <p>Využíváme nejnovější technologie a nástroje, které nám umožňují dosáhnout skvělých výsledků pro naše klienty.</p>
+        </div>
+    </div>
+</section>
 
 
+        <!-- Kontakt Section -->
+<section class="kontakt" id="contact">
+    <h2>Kontakt</h2>
+    <div class="kontakt-container">
+        <div class="kontakt-info">
+            <h3>Adresa</h3>
+            <p>V zářezu 902/6, Praha 5, 158 00 </p>
+            <div class="kontakt-item">
+                <img src="img/phone-line.svg" alt="Telefon" class="icon">
+                <a style="text-decoration: none; color: white;"  href="tel:+420"><span>+420 606 603 012</span></a>
+            </div>
+            <div class="kontakt-item">
+                <img src="img/mail-line.svg" alt="Email" class="icon">
+              <span>  <a style="text-decoration: none;color: white;" href="mailto:">info@domape.cz</span></a>
+            </div>
+     <!-- Obrázek budovy -->
+    <div class="kontakt-budova">
+        <img src="img/WhatsApp Image 2024-09-16 at 09.10.35.jpeg" alt="Budova kanceláře">
+    </div>
+        </div>
+        <div class="kontakt-mapa">
+            <div class="mapa">
+                <iframe style="border-radius: 50%; width: 100%; max-width: 500px; height: 500px;" src="https://frame.mapy.cz/s/fuvazanagu" frameborder="0"></iframe>
+            </div>
+        </div>
+        
+    </div>
 
 
+</section>
 
+    </main>
 
-.service-text ul li {
-    margin-bottom: 10px;
-}
-
-.service-image {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.service-image img {
-    max-width: 80%; /* Restrict image size */
-    border-radius: 50%; /* Make the image circular */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .service-item {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center-align text for smaller screens */
-    }
-
-    .service-item.reverse {
-        flex-direction: column; /* Override reverse for stacking */
-    }
-
-    .service-text {
-        text-align: center; /* Center text */
-        padding: 10px 20px; /* Adjust padding */
-    }
-
-    .service-image img {
-        max-width: 60%; /* Smaller images on small screens */
-    }
-}
-
-/* Career Section */
-.career {
-    padding: 60px 20px;
-    background-color: #fff; /* Bílé pozadí */
-    color: #333; /* Tmavý text pro lepší kontrast na bílém pozadí */
-    text-align: center;
-}
-
-.career h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-family: "Racing Sans One", sans-serif;
-    color: #000; /* Černý text */
-}
-
-.career-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.career-item {
-    flex: 1;
-    min-width: 250px;
-    padding: 20px;
-    margin: 20px;
-    background-color: #e0e0e0; /* Světle šedé pozadí */
-    border-radius: 20px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  14px 14px 28px #bebebe,
-                 -14px -14px 28px #ffffff;
-    text-align: left; /* Zarovnat text vlevo */
-}
-
-.career-item h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #000; /* Černý text */
-}
-.career-item p {
-    font-size: 18px;
-    color: #666; /* Tmavší šedý text */
-}
-
-.career-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .career-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .career-item {
-        max-width: 80%;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* Kontakt Section */
-.kontakt {
-    padding: 60px 20px;
-    background-color: #000; /* Černé pozadí */
-    color: #fff; /* Bílý text */
-    text-align: center;
-}
-
-.kontakt h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-family: "Racing Sans One", sans-serif;
-}
-
-.kontakt-container {
-    display: flex;
-    flex-wrap: wrap; /* Umožňuje přetékání do dalších řádků na menších zařízeních */
-    justify-content: space-between; /* Prostor mezi sloupci */
-    align-items: flex-start; /* Zarovnání k horní části */
-}
-
-.kontakt-info {
-    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
-    max-width: 500px; /* Maximální šířka pro větší obrazovky */
-    text-align: left; /* Zarovnání vlevo */
-    padding: 20px;
-}
-
-.kontakt-info h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-family: "Racing Sans One", sans-serif;
-}
-
-.kontakt-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.kontakt-item span a:hover {
-    color: #ECC7AC;
-}
-.kontakt-item .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    color: #fff;
-}
-
-.kontakt-mapa {
-    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
- 
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mapa {
-    margin-top: -10%;
-    margin-right: -30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* Bílý text */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .kontakt-container {
-        flex-direction: column; /* Změna na vertikální uspořádání na menších obrazovkách */
-        align-items: center; /* Centrovat položky */
-    }
-
-    .kontakt-info, .kontakt-mapa {
-        max-width: 100%; /* Zajištění plné šířky */
-        text-align: center; /* Centrovat text */
-    }
-}
-
-.footer {
-    background-color: #2c2c2c; /* Tmavě šedá barva */
-    color: #ffffff; /* Bílá barva textu */
-    padding: 20px 0; /* Vertikální a horizontální odsazení */
-    text-align: center; /* Zarovnání textu na střed */
-    font-family: Arial, sans-serif; /* Font pro text */
-  }
-  
-  .footer-content p {
-    margin: 5px 0; /* Odsazení mezi odstavci */
-    font-size: 14px; /* Velikost písma */
-  }
-
-  .footer-content .creator {
-    font-size: 12px;
-  }
-  
-  .footer-content a {
-    color: #ffffff; /* Barva odkazu */
-    text-decoration: none; /* Bez podtržení odkazu */
-  }
-  
-  .footer-content a:hover {
-    text-decoration: underline; /* Podtržení odkazu při najetí myší */
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      padding: 15px 0; /* Menší odsazení na menších obrazovkách */
-    }
-    
-    .footer-content p {
-      font-size: 12px; /* Menší velikost písma na menších obrazovkách */
-    }
-  }
-  
+    <footer class="footer">
+        <div class="footer-content">
+          <p>© 2024 <strong>Domape</strong> - všechna práva vyhrazena</p>
+          <p class="creator">Designed by: <a href="https://www.linkedin.com/in/mat%C4%9Bj-solucev-7616bb24b/" target="_blank"><strong>Matěj Solucev</strong></a></p>
+        </div>
+      </footer>
+      
+</body>
+</html>
