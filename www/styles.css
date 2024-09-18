@@ -1,93 +1,664 @@
-/* Základní styly */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ECC7AC;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #cc2e35; /* Barva textu */
+    padding-bottom: 5px; /* Prostor pod textem */
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Tloušťka čáry */
+    background-color: #ECC7AC; /* Barva čáry */
+    top: -10px; /* Vzdálenost nad textem */
+    left: 0;
+    transform: scaleX(0); /* Skrytí čáry */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1); /* Zobrazení čáry při hoveru */
+    transform-origin: bottom left;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 300;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        width: 250px; /* Šířka menu */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Skryté mimo obrazovku napravo */
+        height: 100vh;
+        background-color: #000;
+        padding-top: 60px;
+        transition: transform 0.3s ease;
+        z-index: 0;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(-250px); /* Posune menu do pohledu */
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        display: block;
+    }
+
+    .burger {
+        display: block;
+        z-index: 300;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+    
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/matysoldax_realistic_business_office_group_of_people_working__64318472-5262-43e2-9bda-d7f95f12aba1_0.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-}
-
-h2 {
     text-align: center;
+    color: white;
+    margin-top: 60px; /* To prevent content from hiding under fixed header */
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+}
+
+.hero-content h1 {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 60px;
+}
+.hero-content p {
+    font-family: "Open Sans";
+    color: #ECC7AC;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+
+.about-us {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    font-family: "Racing Sans One", sans-serif;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 15px;
+}
+
+.about-content p {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about-content p i {
+    font-size: 54px;
+    margin-right: 10px;
     color: #333;
 }
 
-/* Styl pro input a tlačítko */
-form input[type="file"] {
-    display: block;
-    margin: 0 auto 15px auto;
+.custom-bullet {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333; /* Bullet color */
 }
 
-form input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+.info-bar {
+    margin-bottom: 40px; /* Zvýšení mezery mezi infobarem a textem */
+    font-family: "Racing Sans One", sans-serif; /* Nastavení stejného fontu jako nadpisy */
+}
+
+
+.info-bar {
+
+    display: inline-block; /* Zajišťuje, že rámeček nebude příliš dlouhý */
+    padding: 20px;
+    background-color: #e0e0e0; /* Světle šedé pozadí */
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  14px 14px 28px #bebebe,
+                 -14px -14px 28px #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin:  auto;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.info-bar p {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .info-bar {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-bar{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        font-size: 20px;
+        
+    }
+
+    .info-bar > div {
+        text-align: center;
+    }
+
+    .info-bar .fajfka {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .info-bar {
+        width: 90%;
+        font-size: 13px;
+    }
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 40px 10px;
+    }
+
+    .about-us h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .highlight-section {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .custom-bullet {
+        margin-bottom: 5px; /* Add space between bullet and text */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .highlight-section {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .custom-bullet {
+        font-size: 20px; /* Slightly smaller bullet */
+    }
+}
+
+
+/* Services Section */
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #111;
     color: white;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ECC7AC; /* Světlá barva ikon */
+}
+
+.service-box h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff; /* Bílá barva textu */
+}
+
+
+
+
+
+
+.service-text ul li {
+    margin-bottom: 10px;
+}
+
+.service-image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image img {
+    max-width: 80%; /* Restrict image size */
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .service-item.reverse {
+        flex-direction: column; /* Override reverse for stacking */
+    }
+
+    .service-text {
+        text-align: center; /* Center text */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .service-image img {
+        max-width: 60%; /* Smaller images on small screens */
+    }
+}
+
+/* Career Section */
+.career {
+    padding: 60px 20px;
+    background-color: #fff; /* Bílé pozadí */
+    color: #333; /* Tmavý text pro lepší kontrast na bílém pozadí */
+    text-align: center;
+}
+
+.career h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Racing Sans One", sans-serif;
+    color: #000; /* Černý text */
+}
+
+.career-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+.career-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #e0e0e0; /* Světle šedé pozadí */
+    border-radius: 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  14px 14px 28px #bebebe,
+                 -14px -14px 28px #ffffff;
+    text-align: left; /* Zarovnat text vlevo */
+}
+
+.career-item h3 {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #000; /* Černý text */
+}
+
+.career-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+
+   
+}
+.career-item p {
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #666; /* Tmavší šedý text */
 }
 
-form input[type="submit"]:hover {
-    background-color: #45a049;
+
+
+/* Career Section - smaller images */
+.career-image {
+    width: 80%; /* Zmenšení obrázků v kartách */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* Styl tabulky */
-.rc-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .career-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .career-item {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Kontakt Section */
+.kontakt {
+    padding: 60px 20px;
+    background-color: #111; /* Černé pozadí */
+    color: #fff; /* Bílý text */
+    text-align: center;
+}
+
+.kontakt h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.kontakt-container {
+    display: flex;
+    flex-wrap: wrap; /* Umožňuje přetékání do dalších řádků na menších zařízeních */
+    justify-content: space-between; /* Prostor mezi sloupci */
+    align-items: flex-start; /* Zarovnání k horní části */
+}
+
+.kontakt-info {
+    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
+    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+    text-align: left; /* Zarovnání vlevo */
+    padding: 20px;
+}
+
+.kontakt-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.kontakt-info p.ico {
+    margin-top: 10px;
+}
+
+.kontakt-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.kontakt-item span a:hover {
+    color: #ECC7AC;
+}
+.kontakt-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.kontakt-budova {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
-.rc-table th, .rc-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+.kontakt-mapa .mapa iframe {
+    width: 100%;
+    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+    height: 500px;
+    border-radius: 50%; /* Udrží tvar kolečka */
+    aspect-ratio: 1 / 1; /* Zajišťuje, že šířka a výška zůstanou stejné */
 }
 
-.rc-table th {
-    background-color: #f2f2f2;
-    color: #333;
+.kontakt-budova img {
+    width: 100%;
+    max-width: 600px; /* Nastaví maximální šířku obrázku */
+    height: auto; /* Zachová proporce obrázku */
+    border-radius: 10px;
 }
 
-.rc-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.kontakt-mapa {
+    flex: 1 1 300px; /* Flexibilní šířka a minimální šířka 300px */
+ 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Chybová zpráva */
-.error {
-    color: red;
-    text-align: center;
+.mapa {
+    margin-top: 0%;
+    margin-right: -30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Bílý text */
+}
+@media (min-width: 769px) {
+    .kontakt-info {
+        margin-left: 5%;
+    }
 }
 
-/* Loader */
-.loader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    display: none;
-    margin: 20px auto;
+
+@media (max-width: 768px) {
+    .kontakt-mapa .mapa iframe {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .kontakt-budova img {
+        max-width: 300px; /* Zmenšení obrázku na menších zařízeních */
+    }
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column; /* Změna na vertikální uspořádání na menších obrazovkách */
+        align-items: center; /* Centrovat položky */
+    }
+
+    .kontakt-info, .kontakt-mapa {
+        max-width: 100%; /* Zajištění plné šířky */
+        text-align: center; /* Centrovat text */
+    }
 }
+
+.footer {
+    background-color: #2c2c2c; /* Tmavě šedá barva */
+    color: #ffffff; /* Bílá barva textu */
+    padding: 20px 0; /* Vertikální a horizontální odsazení */
+    text-align: center; /* Zarovnání textu na střed */
+    font-family: Arial, sans-serif; /* Font pro text */
+  }
+  
+  .footer-content p {
+    margin: 5px 0; /* Odsazení mezi odstavci */
+    font-size: 14px; /* Velikost písma */
+  }
+
+  .footer-content .creator {
+    font-size: 12px;
+  }
+  
+  .footer-content a {
+    color: #ffffff; /* Barva odkazu */
+    text-decoration: none; /* Bez podtržení odkazu */
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline; /* Podtržení odkazu při najetí myší */
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px 0; /* Menší odsazení na menších obrazovkách */
+    }
+    
+    .footer-content p {
+      font-size: 12px; /* Menší velikost písma na menších obrazovkách */
+    }
+  }
+  
