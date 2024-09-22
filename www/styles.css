@@ -136,6 +136,7 @@ color: #ECC7AC; /* Barva čáry */
 }
 
 .hero-content {
+    padding-bottom: 16%;
     position: relative;
     z-index: 1; /* Ensure text is above the overlay */
 }
@@ -537,9 +538,14 @@ color: white;
     padding: 20px;
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 300px;
     margin-bottom: 50px;
 }
+
+.kontakt-info i {
+    font-size: 25px;
+}
+
 
 
 .kontakt-info a {
