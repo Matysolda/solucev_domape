@@ -464,7 +464,8 @@ color: #ECC7AC; /* Barva čáry */
    
 }
 .career-item p {
-    font-size: 16px;
+    font-family: 'Open Sans';
+    font-size: 17px;
     color: #666; /* Tmavší šedý text */
 }
 
