@@ -4,62 +4,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
 
-    // Smooth scroll and close menu for smaller screens
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
-            event.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
 
-            // Odebere "active" třídu ze všech položek
-            navLinks.forEach(navLink => navLink.parentElement.classList.remove('active'));
+            // Kontrola, zda je cílová sekce interní (začíná s "#")
+            if (targetId.startsWith('#')) {
+                event.preventDefault(); // Zamezení výchozí akce kliknutí
+                const targetSection = document.querySelector(targetId); // Výběr cílové sekce
 
-            // Přidá "active" třídu k aktuální položce
-            this.parentElement.classList.add('active');
+                // Odebere "active" třídu ze všech položek
+                navLinks.forEach(navLink => navLink.parentElement.classList.remove('active'));
+                this.parentElement.classList.add('active'); // Přidá "active" třídu k aktuální položce
 
-            if (targetSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
+                if (targetSection) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth' // Plynulý efekt scrollování
+                    });
 
-                // Close menu after click
-                nav.classList.remove('nav-active');
-                burger.classList.remove('toggle'); // Zavřít menu a přepnout zpět na hamburger
+                    // Zavření menu po kliknutí
+                    nav.classList.remove('nav-active');
+                    burger.classList.remove('toggle');
+                }
+            } else {
+                // Pokud není interní odkaz, přesměrujte na stránku
+                window.location.href = targetId;
             }
         });
     });
 
     // Toggle burger menu
     burger.addEventListener('click', function () {
-        nav.classList.toggle('nav-active'); // Otevření/zavření menu
-        burger.classList.toggle('toggle');  // Přepnutí vzhledu burgeru na křížek a zpět
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-links a'); // Výběr všech odkazů v navigaci
-    const header = document.querySelector('header'); // Výběr pevného menu
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault(); // Zamezení výchozí akce kliknutí
-
-            const targetId = this.getAttribute('href'); // Získání ID cílové sekce
-            const targetSection = document.querySelector(targetId); // Výběr cílové sekce
-
-            if (targetSection) {
-                const headerHeight = header.offsetHeight; // Získání výšky pevného menu
-                const targetPosition = targetSection.offsetTop - headerHeight; // Výpočet cílové pozice posunu
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth' // Plynulý efekt scrollování
-                });
-            }
-        });
+        nav.classList.toggle('nav-active');
+        burger.classList.toggle('toggle');
     });
 });
