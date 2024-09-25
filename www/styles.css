@@ -133,7 +133,7 @@ color: #ECC7AC; /* Barva čáry */
 
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/matysoldax_realistic_business_office_group_of_people_working__64318472-5262-43e2-9bda-d7f95f12aba1_0.png'); /* Replace with your image path */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/matysoldax_realistic_business_office_group_of_people_working__64318472-5262-43e2-9bda-d7f95f12aba1_0.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -141,9 +141,34 @@ color: #ECC7AC; /* Barva čáry */
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 60px; /* To prevent content from hiding under fixed header */
+    margin-top: 60px;
     position: relative;
+    overflow: hidden; /* Prevent content from overflowing */
 }
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0; /* Initially hide the content */
+    transform: scale(0.8); /* Scale down the content */
+    animation: fadeInZoom 1.5s forwards; /* Apply animation */
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start scaled down */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1); /* Scale up a bit */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Return to normal size */
+    }
+}
+
 
 .hero-content {
     padding-bottom: 16%;
