@@ -283,6 +283,12 @@ color: #ECC7AC; /* Barva čáry */
 
 }
 
+@media screen and (min-width: 2100px){
+    .info-bar {
+        width: 40%;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about-us {
