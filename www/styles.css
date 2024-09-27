@@ -81,9 +81,14 @@ color: #ECC7AC; /* Barva čáry */
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(255, 255, 255) !important;
     margin: 5px;
     transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .burger div {
+        background-color: white; /* Zkontroluj, jestli tady není černá */
+    }
 }
 @media (max-width: 768px) {
     .nav-links {
@@ -691,4 +696,3 @@ color: white;
       font-size: 12px; /* Menší velikost písma na menších obrazovkách */
     }
   }
-  
