@@ -204,7 +204,13 @@ color: #ECC7AC; /* Barva čáry */
 .button:hover {
     background-color: darkblue;
 }
+@media screen and (max-width: 425px) {
 
+    .hero-content p {
+        font-size: 24px;
+    }
+    
+}
 
 .about-us {
     padding: 60px 20px;
@@ -308,7 +314,7 @@ color: #ECC7AC; /* Barva čáry */
     
     .info-bar {
         width: 90%;
-        font-size: 15px;
+        font-size: 18px;
     }
 
 }
@@ -326,7 +332,7 @@ color: #ECC7AC; /* Barva čáry */
     }
 
     .about-us h2 {
-        font-size: 28px;
+        
         margin-bottom: 20px;
     }
 
@@ -349,13 +355,11 @@ color: #ECC7AC; /* Barva čáry */
 }
 
 @media (max-width: 480px) {
-    .about-us h2 {
-        font-size: 24px;
-    }
+
 
     .about-content p {
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .highlight-section {
